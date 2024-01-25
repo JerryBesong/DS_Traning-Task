@@ -1,0 +1,36 @@
+# first was to create our list of menu
+# alos created stock and price dictionary
+menu = ["Cold Brew", 
+        "Espresso", 
+        "Lattes", 
+        "Cappuccino", 
+        "Cortado", 
+        "Drip Coffee"]
+
+stock = {"Cold Brew": 10, 
+         "Espresso": 20, 
+         "Lattes": 30, 
+         "Cappuccino": 40,
+         "Cortado": 50,
+         "Drip Coffee": 60}
+
+price = {"Cold Brew": 5.00, 
+         "Espresso": 23.00, 
+         "Lattes": 8.90, 
+         "Cappuccino": 10.15,
+         "Cortado": 2.10,
+         "Drip Coffee": 6.00}
+
+# created a vraiable where our total stock will be returned
+
+total_stock = 0
+
+# using the loop function to iterate through our menu list
+
+for items in menu:
+    item_value = (stock[items] * price[items])
+    total_stock += item_value
+    
+print(f"The Total Stock is {total_stock}")
+
+
