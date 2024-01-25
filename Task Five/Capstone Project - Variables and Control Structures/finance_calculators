@@ -1,0 +1,67 @@
+# This program helps users to make calculations correctely
+# here, 'simple' and 'compound interest' calculation was done incliding 'bond interest'.
+# first introduced the Finance calculator to the user
+print()
+print("Hello There. \nWELCOME TO FINANCE CALCULATOR")
+
+print()
+import math
+
+# giving the conditions needed for this to be well accurate, i gave the users options needed for the program to work fine
+
+print("Investment - to calculate the ammount of interest you'll earn on your investment.")
+print("Bond       - to calculate the amount you'll have to pay on a home loan.\n\n")
+
+# requested the input of the users and den saved it as a varaiable.
+
+User_info = input("Enter investment or bond from the menu above to proceed. \nType in investment/bond: ").lower()
+
+# Welcomed the user to the investment section of the finance calculator if investment was typed.
+# asked the user to give more informations to enable the program be more accurate.
+# where p = amount to be deposited, r = interest rate. t = number of years. 
+
+if User_info == "investment":
+    print("\nWelcome to the investment section of FINANCE CALCULATOR. \n")
+    ammount_deposited = int (input("Please enter amount to deposit: "))
+    interest__rate = int (input("Please enter the interest rate in whole number only (eg. 8): "))/100
+    numbers_of_years = int (input("Enter the numbers of year's you plan to invest: "))
+
+# Gave the user an option of either simple interest or a compound interest calculation
+# Calculated the interest and printed the result.
+    
+    interest = input("\nPlease enter if you want a simple or compound interest: ").lower()
+
+    if interest == "simple":
+         simple_interest = ammount_deposited * ( 1 + interest__rate * numbers_of_years )
+         print(f"\nYour Total investment on a simple interest after {interest__rate} year(s) is= {simple_interest}")
+    
+
+    elif interest == "compound":
+         compound_interest = ammount_deposited* math.pow((1 + interest__rate),numbers_of_years)
+         print(f"\nYour Total investment on a compund interest after {interest__rate} year(s) is= {compound_interest}")
+
+    else:
+        print("You entered the type of interest wronglly")
+        print("Please enter if you want a 'simple' or 'compound' interest: ").lower()
+
+# if bond was typed, asked the user to input datas needed to calculate for the bond result
+# Calculated and printed the result
+# rounded my result up
+    
+elif User_info == "bond":
+    print("\nWelcome to the bond section of FINANCE CALCULATOR. \n")
+    house_value = int(input("Please enter the value of the house: "))
+    months = int(input("Please enter the numbers of month(s) bond will be repaid: "))
+    interest_rate = int(input("Please input the monthly interest: "))/100/12
+    monthly_amount = (interest_rate * house_value)/(1-(1 + interest_rate)**(-months))
+    print(f"\nTotal repayment {months} month(s) is {monthly_amount} ")
+    print(f"\nwhich gives us {round(monthly_amount)} when rounded up")
+
+# just in case the user gives a wrong input
+# i notify the user and also ask the user to follow the instruction on the screen
+ 
+else:
+    print(" Investment - to calculate the ammount of interest you'll earn on your investment")
+    print(" Bond       - to calculate the amount you'll have to pay on a home loan\n")
+    print(input(" You have entered an incorrect option. \nEnter investment or bond from the menu above to proceed: ")).lower()
+    
