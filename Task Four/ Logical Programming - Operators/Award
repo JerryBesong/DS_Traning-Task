@@ -1,0 +1,26 @@
+# This program uses a loop to classify artlets and reward them using their finish time.
+
+swimming_time = int(input("Please enter your swimming time here: "))
+cycling_time = int(input("Please enter your cycling time here: "))
+running_time = int(input("Please enter your running time here: "))
+
+total_time = (swimming_time + cycling_time + running_time)
+print("Total Triathon time: ",total_time)
+
+if total_time <= 100:
+    print("Congratulations, you have been awarded:")
+    print("Provincial Colour")
+
+elif total_time <= 105:
+    print("Congratulations, you have been awarded:")
+    print("Provincial Half colours")
+
+elif total_time <= 110:
+    print("Congratulations, you have been awarded:")
+    print("Provincial Scroll")
+
+else:
+    print("Sorry to say:")
+    print("No award")
+
+print("THANK YOU")
