@@ -1,0 +1,32 @@
+print()
+
+# first create a variable where all numbers entered will be stored
+# Ask the user to input numbers
+
+total = 0
+num = int(input("Please enter a numner (-1 to exit): "))
+
+# Because we are not sure how many numbers the user will like to input, when then have to give a command using the while loop 
+# so the user is allowed to enter as many times
+# sum up the numbers given by the user
+
+while num != -1:
+    total += num
+    num = int(input("Please enter another numner (-1 to exit): "))
+
+# create a break when the user is done with inputing numbers 
+    
+    if num == -1:
+        print("you have exited. \nThank you\n")
+
+    # print out the total numbers entered by the user
+        
+        print(f"sum of number entered = {total} ")
+        break
+
+# calculate for the average number entered 
+# print out the total number 
+    
+print("\nwhile the averge of the sum of numbers entered is:")
+average = total / 2
+print(f" average = {average}")
