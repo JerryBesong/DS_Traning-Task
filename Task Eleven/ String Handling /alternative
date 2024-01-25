@@ -1,0 +1,84 @@
+print("\nExample 1")
+# created a two variables (1) to store the string (2)its an empty variable to store our counte 
+
+string = "hello world how are you today, my name is jerry besong"
+newstring = " "
+
+# using the for loop to iterate the string with modules 2
+# using the if statment to store out modules 0 in a upper case inside of our empty variable
+# printed what was saved in our empty variable.
+
+for i in range(len(string)):
+    
+    if i % 2 == 0:
+            newstring += string[i].upper()
+    else:
+            newstring += string[i].lower()
+print(newstring)
+
+
+print("\nExample 2")
+
+# using the same method as the first above
+# created three varaiables (1) to store our string (2) was to split out string
+# (3) empty string to store our returned count.
+
+string = "hello world how are you today, my name is jerry besong"
+string2 = string.split()
+newstring = []
+
+# using the for loop to iterate the string with modules 2
+# using the if statment to store out modules 0 in a upper case inside of our empty variable
+# printed what was saved in our empty variable with the join function.
+
+for i in range(len(string2)):
+    
+    if i % 2 == 0:
+            newstring.append(string2[i].upper())
+    else:
+            newstring.append(string2[i].lower())
+print(" ".join(newstring))
+
+
+
+print("\nExample 3")
+# please this is not part of the task but i was just wanted to push myself further
+# i am trying to merge both task together on a single loop
+# is this the right way or i'm i supposed to use the while loop?
+
+# using the same method as the first above
+# created three varaiables (1) to store our string (2) was to split out string
+# (3) empty string to store our returned count.
+
+string = input("Please kindly enter in a sentence: ")
+print(len(string))
+string2 = string.split()
+newstring = []
+newstring2 = ""
+
+# using the for loop to iterate the string with modules 2
+# using the if statment to store out modules 0 in a upper case inside of our empty variable
+# printed what was saved in our empty variable.
+for i in range(len(string)):
+    
+    if i % 2 == 0:
+            newstring2 += string[i].upper()
+    else:
+            newstring2 += string[i].lower()
+print(newstring2)
+
+
+for i in range(len(string2)):
+    
+    if i % 2 == 0:
+            newstring.append(string2[i].upper())
+    else:
+            newstring.append(string2[i].lower())
+print(" ".join(newstring))
+
+name = "same"
+if name != "sam":
+       print("Hello sam")
+else:
+        print("hello dude")
+print("How are you?")
